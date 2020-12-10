@@ -144,15 +144,7 @@ public class LayoutMasterSetBuilder {
 			
 			FOPAreaTreeHelper.calculateHFExtents(areaTree,  headerBpda,  footerBpda);
 			
-			FOPAreaTreeHelper.adjustLayoutMasterSet(lms, context.getSections(), headerBpda, footerBpda);				
-			
-			// Clean up
-			// this isn't really necessary since its done in WordprocessingMLPackagefinalize(), but this gets rid of them a bit sooner than GC may happen
-			FontTablePart ftp = hfPkg.getMainDocumentPart().getFontTablePart();
-			if (ftp!=null) {
-				ftp.deleteEmbeddedFontTempFiles();
-			}
-			
+			FOPAreaTreeHelper.adjustLayoutMasterSet(lms, context.getSections(), headerBpda, footerBpda);						
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 		}
