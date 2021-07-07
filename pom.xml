@@ -18,6 +18,11 @@
 	    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
 	    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
 	    <github.global.server>github</github.global.server>
+
+			<!-- SonarCloud analysis -->
+			<sonar.projectKey>ashtonbatty_docx4j</sonar.projectKey>
+			<sonar.organization>ashtonbatty</sonar.organization>
+			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
     <packaging>pom</packaging>
